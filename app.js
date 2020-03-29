@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const port = process.env.PORT || 5000;
-const mySecret = 'keepuppayattentionandbehappy';
+const mySecret = process.env.mySecret || 'keepuppayattentionandbehappy';
 
 app.get('/api', (req, res) => {
     res.json({
